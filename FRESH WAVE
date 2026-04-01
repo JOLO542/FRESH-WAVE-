@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Fresh Wave - Fresh Vegetables & Tomatoes</title>
+        <link rel="stylesheet"
+        href="style.css" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+            header {
+                background-color: #2e8b57;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+            /* PRODUCTS / ORDER SECTION */
+            #products {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+            .product-row {
+                margin-bottom: 10px;
+            }
+            .product-row label {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            input[type="number"] {
+                width: 60px;
+            }
+            #orderSummary {
+                margin-top: 15px;
+                border-top: 1px solid #ccc;
+                padding-top: 15px;
+            }
+            /* CONTACT SECTION */
+            #contact {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            #contact label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"], input[type="tel"],
+            input[type="email"] {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+            button {
+                background-color: #2e8b57;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+            button:hover {
+                background-color: #226e45;
+            }
+            .logo {
+                width: 140px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+            header {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            header img {
+                flex-shrink: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+  <ul>
+    <li><a href="#products">Order</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#pricing">Prices</a></li>
+    <li><a href="#delivery">Delivery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+        <header>
+            <img src="images/
+            selected_image_212066071965146691.png"
+            alt="Fresh Wave Logo" class="logo" />
+            <div>
+            <h1>Fresh Wave</h1>
+            <p>Quality Vegetables & Tomatoes at Your Door</p>
+            </div>
+        </header>
+        <main> <!-- PRODUCTS AND OEDER SECTION -->
+            <section id="products">
+                <h2>Available Products</h2>
+                <form id="orderForm">
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Tomatoes"
+                            data-price="5000" />
+                            Tomatoes - UGX 5,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Onions"
+                            data-price="2500" />
+                            Onions - UGX 2,500 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Cabbages"
+                            data-price="4500" />
+                            Cabbages - UGX 4,500 / Head
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="spinach" 
+                            data-price="3000" />
+                            Spinach - UGX 3,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Green Peppers"
+                            data-price="3500" />
+                            Green Peppers - UGX 3,500 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Eggplants"
+                            data-price="4000" />
+                            Eggplants - UGX 4,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Cucumbers"
+                            data-price="3000" />
+                            Cucumbers - UGX 3,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Zucchini"
+                            data-price="3500" />
+                            Zucchini - UGX 3,500 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Kale"
+                            data-price="3000" />
+                            Kale - UGX 3,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Squash"
+                            data-price="4000" />
+                            Squash - UGX 4,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Bell Peppers"
+                            data-price="4500" />
+                            Bell Peppers - UGX 4,500 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Broccoli"
+                            data-price="6000" />
+                            Broccoli - UGX 6,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Brussels Sprouts"
+                            data-price="7000" />
+                            Brussels Sprouts - UGX 7,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Mushrooms"
+                            data-price="8000" />
+                            Mushrooms - UGX 8,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Asparagus"
+                            data-price="7000" />
+                            Asparagus - UGX 7,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Green Beans"
+                            data-price="3500" />
+                            Green Beans - UGX 3,500 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Lettuce"
+                            data-price="2500" />
+                            Lettuce - UGX 2,500 / Head
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Cauliflower"
+                            data-price="5500" />
+                            Cauliflower - UGX 5,500 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Potatoes"
+                            data-price="4000" />
+                            Potatoes - UGX 4,000 /Kg
+                        </label>
+                    </div>
+                    <div class="product-row">
+                        <label>
+                            <input type="checkbox"
+                            name="product" value="Carrots"
+                            data-price="5500" />
+                            Carrots - UGX 5,500 / Kg
+                        </label>
+                        <label>Qty:
+                            <input type="number" name="qty" value="0" min="0" step="1" />
+                        </label>
+                    </div>
+                    <label>
+                        Delivery Address: <br />
+                        <textarea id="deliveryAddress"
+                        rows="3" placeholder="Plot 123, Kampala"></textarea>
+                        </label><br />
+                        <button type="submit">Place Order</button>
+                        </form>
+                        <section id="orderSummary">
+                            <h3>Your Order</h3>
+                            <div id="summaryList"></div>
+                            <div id="totalPrice"></div>
+                            </section>
+                        </section>
+                        <!-- CONTACT SECTION-->
+                         <section id="Contact">
+                            <h2>Contact Us</h2>
+                            <form id="contactForm">
+                                <label>Name:<br />
+                                <input type="text"
+                            id="contactName" placeholder="Your name" required />
+                        </label><br /><br />
+                        <label>Phone:<br />
+                        <input type="tel"
+                    id="contactPhone" placeholder="+256 764496110" required />
+                </label><br /><br />
+                <label>Email:<br />
+                <input type="email"
+            id="contactEmail"
+        placeholder="freshwave@gmail.com" required />
+        </label><br /><br />
+        <label>Message:<br />
+        <textarea id="contactMessage"
+    rows="4" placeholder="How can we help you?"></textarea>
+</label><br />
+        <button type="submit">Send Message</button>
+                            </form>
+                         </section>
+                         </main>
+        <script src="script.js"></script>
+    </body>
+</html>
+<!-- ABOUT & COMPANY CONTACTS -->
+<section id="about">
+  <h2>About Fresh Wave</h2>
+  <p>We supply the freshest vegetables, tomatoes, and cooking essentials across Kampala and Central Region. Fast delivery, quality guaranteed!</p>
+  
+  <div class="company-info">
+    <div class="info-card">
+      <h3>📍 Location</h3>
+      <p>Kampala, Central Region, Uganda
+        Opposite Kalerwe Market
+      </p>
+    </div>
+    
+    <div class="info-card">
+      <h3>📞 Phone</h3>
+      <p>+256 700 123 456<br>+256 772 987 654</p>
+    </div>
+    
+    <div class="info-card">
+      <h3>✉️ Email</h3>
+      <p>info@freshwave.ug<br>orders@freshwave.ug</p>
+    </div>
+    
+    <div class="info-card">
+      <h3>🕒 Hours</h3>
+      <p>Mon-Sat: 6AM - 8PM<br>Sunday: 8AM - 6PM</p>
+    </div>
+  </div>
+
+  <div class="social-links">
+    <h3>Follow Us</h3>
+    <a href="https://wa.me/256700123456" target="_blank">📱 WhatsApp</a>
+    <a href="#" target="_blank">📘 Facebook</a>
+    <a href="#" target="_blank">📷 Instagram</a>
+  </div>
+</section>
+<!-- DELIVERY AREAS -->
+<section id="delivery">
+  <h2>🚚 Delivery Areas</h2>
+  <p>We deliver fresh produce across Kampala and surrounding areas within 1-2 hours!</p>
+  
+  <div class="delivery-grid">
+    <div class="delivery-area">Kampala Central</div>
+    <div class="delivery-area">Nakawa</div>
+    <div class="delivery-area">Makindye</div>
+    <div class="delivery-area">Kawempe</div>
+    <div class="delivery-area">Rubaga</div>
+    <div class="delivery-area">Nakawa Market</div>
+    <div class="delivery-area">Kalerwe</div>
+    <div class="delivery-area">Bwaise</div>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section id="pricing">
+  <h2>💰 Current Prices</h2>
+  <p>Prices per kg/head (UGX). Minimum order UGX 10,000.</p>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price/kg</th>
+        <th>Min Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tomatoes</td>
+        <td>5,000</td>
+        <td>2kg</td>
+      </tr>
+      <tr>
+        <td>Onions</td>
+        <td>2,500</td>
+        <td>3kg</td>
+      </tr>
+      <tr>
+        <td>Cabbage</td>
+        <td>3,000/head</td>
+        <td>2 heads</td>
+      </tr>
+      <tr>
+        <td>Carrots</td>
+        <td>4,000</td>
+        <td>2kg</td>
+      </tr>
+      <tr>
+        <td>Green Peppers</td>
+        <td>6,000</td>
+        <td>1kg</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<body><nav class="navbar">
+  <ul>
+    <li><a href="#products">Order</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#pricing">Prices</a></li>
+    <li><a href="#delivery">Delivery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</body>
+<style>
+    .navbar {
+  background: #2e8b57;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+</style>
+<!-- GOOGLE MAPS -->
+<section id="map">
+  <h2>📍 Our Location</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.684737492!2d32.582519614768!3d0.347595999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMCDCsDIwJzUxLjQiTiAzMsKwMzQnNTkuMiJF!5e0!3m2!1sen!2sug!4v1630000000000!5m2!1sen!2sug" 
+    width="100%" 
+    height="400" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+  <p><small>Our main warehouse - Kampala Central</small></p>
+</section>
+<style>
+/* DELIVERY AREAS */
+#delivery {
+  background: linear-gradient(135deg, #2e8b57, #4CAF50);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.delivery-area {
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+</style>
+<style>
+/* PRICING TABLE */
+#pricing {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #2e8b57;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* GOOGLE MAPS */
+#map {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#map iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+</style>
+<!-- PHOTO GALLERY -->
+<section id="gallery">
+  <h2>🖼️ Fresh Produce Gallery</h2>
+  <p>See the quality we deliver every day!</p>
+  
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/tomatoes.jpg" alt="Fresh Tomatoes" loading="lazy">
+      <p>Fresh Tomatoes</p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/onions.jpg" alt="Red Onions" loading="lazy">
+      <p>Red Onions</p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/cabbage.jpg" alt="Cabbage" loading="lazy">
+      <p>Crisp Cabbage</p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/carrots.jpg" alt="Carrots" loading="lazy">
+      <p>Orange Carrots</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT METHODS -->
+<section id="payments">
+  <h2>💳 Payment Methods</h2>
+  <p>Secure & convenient payment options.</p>
+  
+  <div class="payment-grid">
+    <div class="payment-method">
+      <img src="images/mtn.png" alt="MTN MoMo" width="80">
+      <p>MTN MoMo</p>
+    </div>
+    <div class="payment-method">
+      <img src="images/airtel.png" alt="Airtel Money" width="80">
+      <p>Airtel Money</p>
+    </div>
+    <div class="payment-method">
+      <img src="images/cash.jpg" alt="Cash on Delivery" width="80">
+      <p>Cash on Delivery</p>
+    </div>
+  </div>
+</section>
+<!-- CUSTOMER TESTIMONIALS -->
+<section id="testimonials">
+  <h2>⭐ What Our Customers Say</h2>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <p>"Fresh Wave delivers the best tomatoes in Kampala! Always fresh and on time."</p>
+      <div class="author">
+        <strong>Sarah N.</strong> - Ntinda
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <p>"Great prices and fast delivery to Kalerwe. Will order every week!"</p>
+      <div class="author">
+        <strong>David M.</strong> - Kalerwe
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <p>"Cabbage was so crisp! Cash on delivery worked perfectly."</p>
+      <div class="author">
+        <strong>Mary K.</strong> - Bwaise
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <img src="images/selected_image_212066071965146691.jpg" alt="Fresh Wave Logo" class="footer-logo">
+      <p><strong>Fresh Wave</strong><br>
+      Quality Vegetables Delivered Fresh<br>
+      Kampala, Uganda</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#products">Place Order</a></li>
+        <li><a href="#pricing">Prices</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Contact Info</h4>
+      <p>📞 +256 700 123 456<br>
+      ✉️ info@freshwave.ug<br>
+      📍 Kampala Central</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2026 Fresh Wave Uganda. All rights reserved. | Built with ❤️ for Kampala</p>
+  </div>
+</footer>
+
+<style>
+    /* PHOTO GALLERY */
+#gallery {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.gallery-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+/* PAYMENT METHODS */
+#payments {
+  background: linear-gradient(135deg, #2e8b57, #4CAF50);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payment-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.payment-method {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.payment-method p {
+  margin: 10px 0 0 0;
+  font-weight: bold;
+}
+</style>
+<style>
+  /* TESTIMONIALS */
+#testimonials {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 40px 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.testimonial {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+.testimonial p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.author {
+  font-size: 0.95em;
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #1a3c2a;
+  color: white;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #4CAF50;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  background: #0f2215;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+</style>
